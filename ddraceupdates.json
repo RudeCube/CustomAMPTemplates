@@ -35,13 +35,6 @@
 		"SkipOnFailure": false
 	},
 	{
-		"UpdateStageName": "Server File Make Executable",
-		"UpdateSourcePlatform": "Linux",
-		"UpdateSource": "SetExecutableFlag",
-		"UpdateSourceData": "DDNet-Server",
-		"SkipOnFailure": false
-	},
-	{
 		"UpdateStageName": "Create User Directory",
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "CreateDirectory",
