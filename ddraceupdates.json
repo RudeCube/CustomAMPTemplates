@@ -21,9 +21,8 @@
 	{
 		"UpdateStageName": "Server File Make Executable",
 		"UpdateSourcePlatform": "Linux",
-		"UpdateSource": "Executable",
-		"UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"cd ddrace && \\chmod +x ./DDNet-Server >/dev/null 2>&1\"",
+		"UpdateSource": "SetExecutableFlag",
+		"UpdateSourceData": "DDNet-Server",
 		"SkipOnFailure": false
 	},
 	{
