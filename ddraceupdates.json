@@ -27,11 +27,30 @@
 		"SkipOnFailure": false
 	},
 	{
-		"UpdateStageName": "Server Files Purge",
+		"UpdateStageName": "Maps Download",
+		"UpdateSourcePlatform": "Linux",
+		"UpdateSource": "FetchURL",
+		"UpdateSourceData": "https://github.com/ddnet/ddnet-maps/archive/refs/heads/master.zip",
+		"UpdateSourceTarget": "{{$FullBaseDir}}",
+		"UnzipUpdateSource": true,
+		"OverwriteExistingFiles": true,
+		"DeleteAfterExtract": true,
+		"OneShot": true
+	},
+	{
+		"UpdateStageName": "Maps Files Copy",
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "Executable",
 		"UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && rm -rf DDNet-19.8.2-linux_x86_64 >/dev/null 2>&1 && rm -rf DDNet-19.8.2-linux_x86_64.tar.xz >/dev/null 2>&1\"",
+		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && \\cp -rf ddnet-maps-master/* ./ >/dev/null 2>&1\"",
+		"SkipOnFailure": false
+	},
+	{
+		"UpdateStageName": "Extracted Files Purge",
+		"UpdateSourcePlatform": "Linux",
+		"UpdateSource": "Executable",
+		"UpdateSourceData": "/bin/bash",
+		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && rm -rf DDNet-19.8.2-linux_x86_64 >/dev/null 2>&1 && rm -rf DDNet-19.8.2-linux_x86_64.tar.xz >/dev/null 2>&1 && rm -rf ddnet-maps-master >/dev/null 2>&1\"",
 		"SkipOnFailure": false
 	},
 	{
