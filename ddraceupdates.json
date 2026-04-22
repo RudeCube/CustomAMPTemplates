@@ -5,22 +5,46 @@
 		"UpdateSource": "FetchURL",
 		"UpdateSourceData": "https://ddnet.org/downloads/DDNet-19.8.2-linux_x86_64.tar.xz",
 		"UpdateSourceTarget": "{{$FullBaseDir}}",
-		"UnzipUpdateSource": true,
+		"UnzipUpdateSource": false,
 		"OverwriteExistingFiles": true,
-		"DeleteAfterExtract": true,
+		"DeleteAfterExtract": false,
 		"OneShot": true
+	},
+	{
+		"UpdateStageName": "Server Files Extract",
+		"UpdateSourcePlatform": "Linux",
+		"UpdateSource": "Executable",
+		"UpdateSourceData": "/bin/bash",
+		"UpdateSourceArgs": "-c \"tar -xf DDNet-19.8.2-linux_x86_64.tar.xz >/dev/null 2>&1\"",
+		"SkipOnFailure": false
+	},
+	{
+		"UpdateStageName": "Server File Make Executable",
+		"UpdateSourcePlatform": "Linux",
+		"UpdateSource": "Executable",
+		"UpdateSourceData": "/bin/bash",
+		"UpdateSourceArgs": "-c \"chmod +x ./DDNet-Server >/dev/null 2>&1\"",
+		"SkipOnFailure": false
 	},
 	{
 		"UpdateStageName": "Server Files Copy",
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "Executable",
 		"UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"cd ddrace && \\cp -rf DDNet-19.8-linux_x86_64/* ./ >/dev/null 2>&1 && rm -rf DDNet-19.8-linux_x86_64 >/dev/null 2>&1\"",
+		"UpdateSourceArgs": "-c \"cd ddrace && \\cp -rf DDNet-19.8-linux_x86_64/* ./ >/dev/null 2>&1\"",
+		"SkipOnFailure": false
+	},
+	{
+		"UpdateStageName": "Server Files Purge",
+		"UpdateSourcePlatform": "Linux",
+		"UpdateSource": "Executable",
+		"UpdateSourceData": "/bin/bash",
+		"UpdateSourceArgs": "-c \"rm -rf DDNet-19.8-linux_x86_64 >/dev/null 2>&1 && rm -rf DDNet-19.8.2-linux_x86_64.tar.xz >/dev/null 2>&1\"",
 		"SkipOnFailure": false
 	},
 	{
 		"UpdateStageName": "Create User Directory",
-		"UpdateSourcePlatform": "All",
+		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "CreateDirectory",
 		"UpdateSourceArgs": "{{$FullBaseDir}}user",
 		"SkipOnFailure": false
