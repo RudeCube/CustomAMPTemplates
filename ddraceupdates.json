@@ -23,7 +23,7 @@
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "Executable",
 		"UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"chmod +x ./DDNet-Server >/dev/null 2>&1\"",
+		"UpdateSourceArgs": "-c \"cd ddrace && \\chmod +x ./DDNet-Server >/dev/null 2>&1\"",
 		"SkipOnFailure": false
 	},
 	{
