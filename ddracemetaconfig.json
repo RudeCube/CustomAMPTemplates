@@ -1,1 +1,10 @@
-[]
+[
+	{
+		"ConfigFile": "serverconfig.cfg",
+		"ConfigType": "kvp",
+		"AutoMap": true,
+		"Importable": true,
+		"ConfigFormat": "{0} {1}",
+		"ConfigFormatRegex": "^(?<key>.+?) (?<value>.*)$"
+	}
+]
