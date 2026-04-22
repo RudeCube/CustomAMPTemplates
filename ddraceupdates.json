@@ -46,11 +46,19 @@
 		"SkipOnFailure": false
 	},
 	{
+		"UpdateStageName": "Server Rename Config",
+		"UpdateSourcePlatform": "Linux",
+		"UpdateSource": "Executable",
+		"UpdateSourceData": "/bin/bash",
+		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && \\cp -rf autoexec_server.cfg serverconfig.cfg >/dev/null 2>&1\"",
+		"SkipOnFailure": false
+	},
+	{
 		"UpdateStageName": "Extracted Files Purge",
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "Executable",
 		"UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && rm -rf DDNet-19.8.2-linux_x86_64 >/dev/null 2>&1 && rm -rf DDNet-19.8.2-linux_x86_64.tar.xz >/dev/null 2>&1 && rm -rf ddnet-maps-master >/dev/null 2>&1 && rm -rf data/autoexec_server.cfg >/dev/null 2>&1\"",
+		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && rm -rf DDNet-19.8.2-linux_x86_64 >/dev/null 2>&1 && rm -rf DDNet-19.8.2-linux_x86_64.tar.xz >/dev/null 2>&1 && rm -rf ddnet-maps-master >/dev/null 2>&1 && rm -rf data/autoexec_server.cfg >/dev/null 2>&1 && rm -rf autoexec_server.cfg >/dev/null 2>&1\"",
 		"SkipOnFailure": false
 	},
 	{
