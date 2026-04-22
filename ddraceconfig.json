@@ -8,7 +8,7 @@
 		"FieldName": "sv_name",
 		"InputType": "text",
 		"ParamFieldName": "sv_name",
-		"DefaultValue": "AMP Powered Teeworlds Server",
+		"DefaultValue": "DDNet South Africa",
 		"EnumValues": {}
 	},
 	{
