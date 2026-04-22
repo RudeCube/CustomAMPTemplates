@@ -15,7 +15,7 @@
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "Executable",
 		"UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"cd teeworlds && \\cp -rf DDNet-19.8-linux_x86_64/* ./ >/dev/null 2>&1 && rm -rf DDNet-19.8-linux_x86_64 >/dev/null 2>&1\"",
+		"UpdateSourceArgs": "-c \"cd ddrace && \\cp -rf DDNet-19.8-linux_x86_64/* ./ >/dev/null 2>&1 && rm -rf DDNet-19.8-linux_x86_64 >/dev/null 2>&1\"",
 		"SkipOnFailure": false
 	},
 	{
