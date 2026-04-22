@@ -15,7 +15,7 @@
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "Executable",
 		"UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"tar -xf DDNet-19.8.2-linux_x86_64.tar.xz\"",
+		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && tar -xf DDNet-19.8.2-linux_x86_64.tar.xz\"",
 		"SkipOnFailure": false
 	},
 	{
@@ -30,7 +30,7 @@
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "Executable",
 		"UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"cd ddrace && \\cp -rf DDNet-19.8-linux_x86_64/* ./ >/dev/null 2>&1\"",
+		"UpdateSourceArgs": "-c \"cd ddrace && \\cp -rf DDNet-19.8.2-linux_x86_64/* ./ >/dev/null 2>&1\"",
 		"SkipOnFailure": false
 	},
 	{
@@ -38,7 +38,7 @@
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "Executable",
 		"UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"rm -rf DDNet-19.8-linux_x86_64 >/dev/null 2>&1 && rm -rf DDNet-19.8.2-linux_x86_64.tar.xz >/dev/null 2>&1\"",
+		"UpdateSourceArgs": "-c \"rm -rf DDNet-19.8.2-linux_x86_64 >/dev/null 2>&1 && rm -rf DDNet-19.8.2-linux_x86_64.tar.xz >/dev/null 2>&1\"",
 		"SkipOnFailure": false
 	},
 	{
