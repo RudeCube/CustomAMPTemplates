@@ -1,1 +1,80 @@
-[]
+[
+	{
+		"DisplayName": "Server Name",
+		"Category": "Teeworlds:stadia_controller",
+		"Subcategory": "Server:dns:1",
+		"Description": "Sets the name of the server",
+		"Keywords": "server,name,sv_name",
+		"FieldName": "sv_name",
+		"InputType": "text",
+		"ParamFieldName": "sv_name",
+		"DefaultValue": "AMP Powered Teeworlds Server",
+		"EnumValues": {}
+	},
+	{
+		"DisplayName": "Bind Address",
+		"Category": "Teeworlds:stadia_controller",
+		"Subcategory": "Server:dns:1",
+		"Description": "",
+		"Keywords": "",
+		"FieldName": "$ApplicationIPBinding",
+		"InputType": "text",
+		"Hidden": true,
+		"ParamFieldName": "bindaddr",
+		"ExcludeFromImport": true,
+		"EnumValues": {}
+	},
+	{
+		"DisplayName": "External Console Bind Address",
+		"Category": "Teeworlds:stadia_controller",
+		"Subcategory": "External console:settings",
+		"Description": "",
+		"Keywords": "",
+		"FieldName": "ec_bindaddr",
+		"InputType": "text",
+		"Hidden": true,
+		"ParamFieldName": "ec_bindaddr",
+		"DefaultValue": "localhost",
+		"ExcludeFromImport": true,
+		"EnumValues": {}
+	},
+	{
+		"DisplayName": "Server Port",
+		"Category": "Teeworlds:stadia_controller",
+		"Subcategory": "Server:dns:1",
+		"Description": "",
+		"Keywords": "",
+		"FieldName": "$ServerPort",
+		"InputType": "number",
+		"Hidden": true,
+		"ParamFieldName": "sv_port",
+		"ExcludeFromImport": true,
+		"EnumValues": {}
+	},
+	{
+		"DisplayName": "External Port",
+		"Category": "Teeworlds:stadia_controller",
+		"Subcategory": "Server:dns:1",
+		"Description": "",
+		"Keywords": "",
+		"FieldName": "$ServerPort",
+		"InputType": "number",
+		"Hidden": true,
+		"ParamFieldName": "sv_external_port",
+		"ExcludeFromImport": true,
+		"EnumValues": {}
+	},
+	{
+		"DisplayName": "External Console Port",
+		"Category": "Teeworlds:stadia_controller",
+		"Subcategory": "External console:settings",
+		"Description": "",
+		"Keywords": "",
+		"FieldName": "$ConsolePort",
+		"InputType": "number",
+		"Hidden": true,
+		"ParamFieldName": "ec_port",
+		"ExcludeFromImport": true,
+		"EnumValues": {}
+	}
+]
