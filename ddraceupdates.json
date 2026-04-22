@@ -19,13 +19,6 @@
 		"SkipOnFailure": false
 	},
 	{
-		"UpdateStageName": "Server File Make Executable",
-		"UpdateSourcePlatform": "Linux",
-		"UpdateSource": "SetExecutableFlag",
-		"UpdateSourceData": "DDNet-Server",
-		"SkipOnFailure": false
-	},
-	{
 		"UpdateStageName": "Server Files Copy",
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "Executable",
@@ -39,6 +32,13 @@
 		"UpdateSource": "Executable",
 		"UpdateSourceData": "/bin/bash",
 		"UpdateSourceArgs": "-c \"rm -rf DDNet-19.8.2-linux_x86_64 >/dev/null 2>&1 && rm -rf DDNet-19.8.2-linux_x86_64.tar.xz >/dev/null 2>&1\"",
+		"SkipOnFailure": false
+	},
+	{
+		"UpdateStageName": "Server File Make Executable",
+		"UpdateSourcePlatform": "Linux",
+		"UpdateSource": "SetExecutableFlag",
+		"UpdateSourceData": "DDNet-Server",
 		"SkipOnFailure": false
 	},
 	{
