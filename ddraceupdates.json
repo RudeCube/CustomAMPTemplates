@@ -15,7 +15,7 @@
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "Executable",
 		"UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"echo test\"",
+		"UpdateSourceArgs": "-c \"tar -xf DDNet-19.8.2-linux_x86_64.tar.xz >/dev/null 2>&1\"",
 		"SkipOnFailure": false
 	},
 	{
