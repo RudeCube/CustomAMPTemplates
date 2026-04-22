@@ -1,23 +1,16 @@
 [
-    {
-        "Protocol": "UDP",
-        "Port": "8303",
-        "Name": "Server Port",
-        "Description": "Port used for main game traffic",
-        "Ref": "ServerPort"
-    },
-    {
-        "Protocol": "TCP",
-        "Port": "8304",
-        "Name": "Rcon",
-        "Description": "Port used for main game traffic",
-        "Ref": "Rcon"
-    },
-    {
-        "Protocol": "TCP",
-        "Port": "2225",
-        "Name": "SFTP",
-        "Description": "Port used for main game traffic",
-        "Ref": "SFTP"
-    }
+	{
+		"Protocol": "UDP",
+		"Port": 8303,
+		"Name": "Server Port",
+		"Description": "Port for main game traffic",
+		"Ref": "ServerPort"
+	},
+	{
+		"Protocol": "TCP",
+		"Port": 8304,
+		"Name": "Console Port",
+		"Description": "Port for external console traffic",
+		"Ref": "ConsolePort"
+	}
 ]
