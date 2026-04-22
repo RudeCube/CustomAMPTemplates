@@ -1,0 +1,13 @@
+[
+    {
+        "UpdateStageName": "Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://ddnet.org/downloads/DDNet-19.8.2-linux_x86_64.tar.xz",
+        "UpdateSourceTarget": "teeworld",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": true
+    }
+]
