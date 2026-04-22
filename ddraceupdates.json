@@ -1,6 +1,6 @@
 [
 	{
-		"UpdateStageName": "Server Download",
+		"UpdateStageName": "Download Server",
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "FetchURL",
 		"UpdateSourceData": "https://ddnet.org/downloads/DDNet-19.8.2-linux_x86_64.tar.xz",
@@ -11,7 +11,7 @@
 		"OneShot": true
 	},
 	{
-		"UpdateStageName": "Server Files Extract",
+		"UpdateStageName": "Extract Server Files",
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "Executable",
 		"UpdateSourceData": "/bin/bash",
@@ -19,7 +19,7 @@
 		"SkipOnFailure": false
 	},
 	{
-		"UpdateStageName": "Server Files Copy",
+		"UpdateStageName": "Copy Server Files",
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "Executable",
 		"UpdateSourceData": "/bin/bash",
@@ -27,7 +27,7 @@
 		"SkipOnFailure": false
 	},
 	{
-		"UpdateStageName": "Maps Download",
+		"UpdateStageName": "Download Maps",
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "FetchURL",
 		"UpdateSourceData": "https://github.com/ddnet/ddnet-maps/archive/refs/heads/master.zip",
@@ -38,7 +38,7 @@
 		"OneShot": true
 	},
 	{
-		"UpdateStageName": "Maps Files Copy",
+		"UpdateStageName": "Copy Maps Files",
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "Executable",
 		"UpdateSourceData": "/bin/bash",
@@ -46,26 +46,28 @@
 		"SkipOnFailure": false
 	},
 	{
-		"UpdateStageName": "Server Rename Config",
-		"UpdateSourcePlatform": "Linux",
-		"UpdateSource": "Executable",
-		"UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && \\cp -rf autoexec_server.cfg serverconfig.cfg >/dev/null 2>&1\"",
-		"SkipOnFailure": false
-	},
-	{
-		"UpdateStageName": "Extracted Files Purge",
-		"UpdateSourcePlatform": "Linux",
-		"UpdateSource": "Executable",
-		"UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && rm -rf DDNet-19.8.2-linux_x86_64 >/dev/null 2>&1 && rm -rf DDNet-19.8.2-linux_x86_64.tar.xz >/dev/null 2>&1 && rm -rf ddnet-maps-master >/dev/null 2>&1 && rm -rf data/autoexec_server.cfg >/dev/null 2>&1 && rm -rf autoexec_server.cfg >/dev/null 2>&1\"",
-		"SkipOnFailure": false
-	},
-	{
 		"UpdateStageName": "Create User Directory",
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "CreateDirectory",
 		"UpdateSourceArgs": "{{$FullBaseDir}}user",
+		"SkipOnFailure": false
+	},
+	{
+		"UpdateStageName": "Get serverconfig.cfg File",
+		"UpdateSourcePlatform": "All",
+		"UpdateSource": "FetchURL",
+		"UpdateSourceData": "https://raw.githubusercontent.com/RudeCube/CustomAMPTemplates/refs/heads/main/serverconfig.cfg",
+		"UpdateSourceArgs": "serverconfig.cfg",
+		"UpdateSourceTarget": "{{$FullBaseDir}}user",
+		"OverwriteExistingFiles": false,
+		"SkipOnFailure": false
+	},
+	{
+		"UpdateStageName": "Purge Extracted Files",
+		"UpdateSourcePlatform": "Linux",
+		"UpdateSource": "Executable",
+		"UpdateSourceData": "/bin/bash",
+		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && rm -rf DDNet-19.8.2-linux_x86_64 >/dev/null 2>&1 && rm -rf DDNet-19.8.2-linux_x86_64.tar.xz >/dev/null 2>&1 && rm -rf ddnet-maps-master >/dev/null 2>&1 && rm -rf data/autoexec_server.cfg >/dev/null 2>&1 && rm -rf autoexec_server.cfg >/dev/null 2>&1\"",
 		"SkipOnFailure": false
 	}
 ]
