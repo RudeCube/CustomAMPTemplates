@@ -115,5 +115,69 @@
 			"False": "0",
 			"True": "1"
 		}
+	},
+	{
+		"DisplayName": "Client Limit",
+		"Category": "Teeworlds:stadia_controller",
+		"Subcategory": "Server:dns:1",
+		"Description": "Sets the maximum number of clients that can be connected to the server at one time",
+		"Keywords": "max,maximum,clients,players,limit,sv_max_clients",
+		"FieldName": "sv_max_clients",
+		"InputType": "number",
+		"ParamFieldName": "sv_max_clients",
+		"DefaultValue": "12",
+		"Placeholder": "12",
+		"Suffix": "clients",
+		"EnumValues": {}
+	},
+	{
+		"DisplayName": "Client Limit Per IP",
+		"Category": "Teeworlds:stadia_controller",
+		"Subcategory": "Server:dns:1",
+		"Description": "Sets the maximum number of clients with the same IP that can connect to the server at one time",
+		"Keywords": "max,maximum,clients,players,limit,ip,sv_max_clients_per_ip",
+		"FieldName": "sv_max_clients_per_ip",
+		"InputType": "number",
+		"ParamFieldName": "sv_max_clients_per_ip",
+		"DefaultValue": "12",
+		"Placeholder": "12",
+		"Suffix": "clients",
+		"EnumValues": {}
+	},
+	{
+		"DisplayName": "RCON Password",
+		"Category": "Teeworlds:stadia_controller",
+		"Subcategory": "Server:dns:1",
+		"Description": "Sets the password to access the remote console. Empty = RCON disabled",
+		"Keywords": "rcon,password,sv_rcon_password",
+		"FieldName": "sv_rcon_password",
+		"InputType": "password",
+		"ParamFieldName": "sv_rcon_password",
+		"DefaultValue": "",
+		"EnumValues": {}
+	},
+	{
+		"DisplayName": "RCON Moderator Password",
+		"Category": "Teeworlds:stadia_controller",
+		"Subcategory": "Server:dns:1",
+		"Description": "Sets the remote console password for moderators (limited access)",
+		"Keywords": "rcon,mod,password,sv_rcon_mod_password",
+		"FieldName": "sv_rcon_mod_password",
+		"InputType": "password",
+		"ParamFieldName": "sv_rcon_mod_password",
+		"DefaultValue": "",
+		"EnumValues": {}
+	},
+	{
+		"DisplayName": "RCON Helper Password",
+		"Category": "Teeworlds:stadia_controller",
+		"Subcategory": "Server:dns:1",
+		"Description": "Sets the remote console password for helpers (limited access)",
+		"Keywords": "rcon,help,password,sv_rcon_helper_password",
+		"FieldName": "sv_rcon_helper_password",
+		"InputType": "password",
+		"ParamFieldName": "sv_rcon_helper_password",
+		"DefaultValue": "",
+		"EnumValues": {}
 	}
 ]
