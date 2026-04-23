@@ -1,6 +1,6 @@
 [
 	{
-		"UpdateStageName": "Download Server",
+		"UpdateStageName": "Get Server File",
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "FetchURL",
 		"UpdateSourceData": "https://ddnet.org/downloads/DDNet-19.8.2-linux_x86_64.tar.xz",
@@ -8,26 +8,21 @@
 		"UnzipUpdateSource": false,
 		"OverwriteExistingFiles": true,
 		"DeleteAfterExtract": false,
-		"OneShot": true
+		"OneShot": false
 	},
 	{
-		"UpdateStageName": "Extract Server Files",
+		"UpdateStageName": "Get serverconfig.cfg File",
 		"UpdateSourcePlatform": "Linux",
-		"UpdateSource": "Executable",
-		"UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && tar -xf DDNet-19.8.2-linux_x86_64.tar.xz >/dev/null 2>&1\"",
-		"SkipOnFailure": false
+		"UpdateSource": "FetchURL",
+		"UpdateSourceData": "https://raw.githubusercontent.com/RudeCube/CustomAMPTemplates/refs/heads/main/serverconfig.cfg",
+		"UpdateSourceArgs": "serverconfig.cfg",
+		"UpdateSourceTarget": "{{$FullBaseDir}}",
+		"OverwriteExistingFiles": true,
+		"SkipOnFailure": false,
+		"OneShot": false
 	},
 	{
-		"UpdateStageName": "Copy Server Files",
-		"UpdateSourcePlatform": "Linux",
-		"UpdateSource": "Executable",
-		"UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && \\cp -rf DDNet-19.8.2-linux_x86_64/* ./ >/dev/null 2>&1\"",
-		"SkipOnFailure": false
-	},
-	{
-		"UpdateStageName": "Download Maps",
+		"UpdateStageName": "Get Maps",
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "FetchURL",
 		"UpdateSourceData": "https://github.com/ddnet/ddnet-maps/archive/refs/heads/master.zip",
@@ -38,28 +33,19 @@
 		"OneShot": true
 	},
 	{
-		"UpdateStageName": "Copy Maps Files",
+		"UpdateStageName": "Setup Server Files",
+		"UpdateSourcePlatform": "Linux",
+		"UpdateSource": "Executable",
+		"UpdateSourceData": "/bin/bash",
+		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && tar -xf DDNet-19.8.2-linux_x86_64.tar.xz >/dev/null 2>&1 && \\cp -rf DDNet-19.8.2-linux_x86_64/* ./ >/dev/null 2>&1\"",
+		"SkipOnFailure": false
+	},
+	{
+		"UpdateStageName": "Setup Map Files",
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "Executable",
 		"UpdateSourceData": "/bin/bash",
 		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && \\cp -rf ddnet-maps-master/* ./ >/dev/null 2>&1\"",
-		"SkipOnFailure": false
-	},
-	{
-		"UpdateStageName": "Create User Directory",
-		"UpdateSourcePlatform": "Linux",
-		"UpdateSource": "CreateDirectory",
-		"UpdateSourceArgs": "{{$FullBaseDir}}user",
-		"SkipOnFailure": false
-	},
-	{
-		"UpdateStageName": "Get serverconfig.cfg File",
-		"UpdateSourcePlatform": "All",
-		"UpdateSource": "FetchURL",
-		"UpdateSourceData": "https://raw.githubusercontent.com/RudeCube/CustomAMPTemplates/refs/heads/main/serverconfig.cfg",
-		"UpdateSourceArgs": "serverconfig.cfg",
-		"UpdateSourceTarget": "{{$FullBaseDir}}user",
-		"OverwriteExistingFiles": false,
 		"SkipOnFailure": false
 	},
 	{
