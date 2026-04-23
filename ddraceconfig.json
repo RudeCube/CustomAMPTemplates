@@ -110,7 +110,7 @@
 		"FieldName": "sv_register",
 		"InputType": "checkbox",
 		"ParamFieldName": "sv_register",
-		"DefaultValue": "1",
+		"DefaultValue": "0",
 		"EnumValues": {
 			"False": "0",
 			"True": "1"
