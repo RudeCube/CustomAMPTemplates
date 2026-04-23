@@ -179,5 +179,91 @@
 		"ParamFieldName": "sv_rcon_helper_password",
 		"DefaultValue": "",
 		"EnumValues": {}
+	},
+	{
+		"DisplayName": "External Console Password",
+		"Category": "Teeworlds:stadia_controller",
+		"Subcategory": "External console:settings",
+		"Description": "",
+		"Keywords": "",
+		"FieldName": "$RemoteAdminPassword",
+		"InputType": "password",
+		"Hidden": true,
+		"ParamFieldName": "ec_password",
+		"ExcludeFromImport": true,
+		"EnumValues": {}
+	},
+	{
+		"DisplayName": "Inactive Kick Mode",
+		"Category": "Teeworlds:stadia_controller",
+		"Subcategory": "Server:dns:1",
+		"Description": "Sets how to deal with inactive clients",
+		"Keywords": "inactive,kick,sv_inactivekick",
+		"FieldName": "sv_inactivekick",
+		"InputType": "enum",
+		"ParamFieldName": "sv_inactivekick",
+		"DefaultValue": "2",
+		"EnumValues": {
+			"1": "Move player to spectator",
+			"2": "Move to free spectator slot, otherwise kick",
+			"3": "Kick"
+		}
+	},
+	{
+		"DisplayName": "Inactive Kick Time",
+		"Category": "Teeworlds:stadia_controller",
+		"Subcategory": "Server:dns:1",
+		"Description": "Sets the time to wait before taking care of inactive clients",
+		"Keywords": "inactive,kick,time,sv_inactivekick_time",
+		"FieldName": "sv_inactivekick_time",
+		"InputType": "number",
+		"ParamFieldName": "sv_inactivekick_time",
+		"DefaultValue": "3",
+		"Placeholder": "3",
+		"Suffix": "minutes",
+		"EnumValues": {}
+	},
+	{
+		"DisplayName": "Enable High Bandwidth Mode",
+		"Category": "Teeworlds:stadia_controller",
+		"Subcategory": "Server:dns:1",
+		"Description": "If set, the server will use high bandwidth mode. Doubles the bandwidth required for the server. LAN use only",
+		"Keywords": "high,bandwidth,sv_high_bandwidth",
+		"FieldName": "sv_high_bandwidth",
+		"InputType": "checkbox",
+		"ParamFieldName": "sv_high_bandwidth",
+		"DefaultValue": "0",
+		"EnumValues": {
+			"False": "0",
+			"True": "1"
+		}
+	},
+	{
+		"DisplayName": "Map Download Speed",
+		"Category": "Teeworlds:stadia_controller",
+		"Subcategory": "Server:dns:1",
+		"Description": "Sets the number of map data packages a client gets on each request",
+		"Keywords": "map,download,speed,sv_map_download_speed",
+		"FieldName": "sv_map_download_speed",
+		"InputType": "number",
+		"ParamFieldName": "sv_map_download_speed",
+		"DefaultValue": "8",
+		"Placeholder": "8",
+		"EnumValues": {}
+	},
+	{
+		"DisplayName": "Enable Spam Protection",
+		"Category": "Teeworlds:stadia_controller",
+		"Subcategory": "Server:dns:1",
+		"Description": "If set, spam protection will be enabled",
+		"Keywords": "spam,protection,sv_spamprotection",
+		"FieldName": "sv_spamprotection",
+		"InputType": "checkbox",
+		"ParamFieldName": "sv_spamprotection",
+		"DefaultValue": "1",
+		"EnumValues": {
+			"False": "0",
+			"True": "1"
+		}
 	}
 ]
