@@ -8,7 +8,7 @@
 		"UnzipUpdateSource": false,
 		"OverwriteExistingFiles": true,
 		"DeleteAfterExtract": false,
-		"OneShot": false
+		"OneShot": true
 	},
 	{
 		"UpdateStageName": "Get serverconfig.cfg File",
@@ -48,23 +48,17 @@
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "Executable",
 		"UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && tar -xf DDNet-19.8.2-linux_x86_64.tar.xz >/dev/null 2>&1 && \\cp -rf DDNet-19.8.2-linux_x86_64/* ./ >/dev/null 2>&1\"",
-		"SkipOnFailure": false
+		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && tar -xf DDNet-19.8.2-linux_x86_64.tar.xz >/dev/null 2>&1 && \\cp -rf DDNet-19.8.2-linux_x86_64/* ./ >/dev/null 2>&1 && rm -rf DDNet-19.8.2-linux_x86_64 >/dev/null 2>&1 && rm -rf DDNet-19.8.2-linux_x86_64.tar.xz >/dev/null 2>&1 && rm -rf data/autoexec_server.cfg >/dev/null 2>&1\"",
+		"SkipOnFailure": false,
+		"OneShot": true
 	},
 	{
 		"UpdateStageName": "Setup Map Files",
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "Executable",
 		"UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && \\cp -rf ddnet-maps-master/* ./ >/dev/null 2>&1\"",
-		"SkipOnFailure": false
-	},
-	{
-		"UpdateStageName": "Purge Extracted Files",
-		"UpdateSourcePlatform": "Linux",
-		"UpdateSource": "Executable",
-		"UpdateSourceData": "/bin/bash",
-		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && rm -rf DDNet-19.8.2-linux_x86_64 >/dev/null 2>&1 && rm -rf DDNet-19.8.2-linux_x86_64.tar.xz >/dev/null 2>&1 && rm -rf ddnet-maps-master >/dev/null 2>&1 && rm -rf data/autoexec_server.cfg >/dev/null 2>&1 && rm -rf autoexec_server.cfg >/dev/null 2>&1\"",
-		"SkipOnFailure": false
+		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && \\cp -rf ddnet-maps-master/* ./ >/dev/null 2>&1 && rm -rf ddnet-maps-master >/dev/null 2>&1 && rm -rf autoexec_server.cfg >/dev/null 2>&1\"",
+		"SkipOnFailure": false,
+		"OneShot": true
 	}
 ]
