@@ -11,17 +11,6 @@
 		"OneShot": true
 	},
 	{
-		"UpdateStageName": "Get serverconfig.cfg File",
-		"UpdateSourcePlatform": "Linux",
-		"UpdateSource": "FetchURL",
-		"UpdateSourceData": "https://raw.githubusercontent.com/RudeCube/CustomAMPTemplates/refs/heads/main/serverconfig.cfg",
-		"UpdateSourceArgs": "serverconfig.cfg",
-		"UpdateSourceTarget": "{{$FullBaseDir}}",
-		"OverwriteExistingFiles": true,
-		"SkipOnFailure": false,
-		"OneShot": false
-	},
-	{
 		"UpdateStageName": "Get Maps",
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "FetchURL",
@@ -49,5 +38,16 @@
 		"UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && \\cp -rf ddnet-maps-master/* ./ >/dev/null 2>&1 && rm -rf ddnet-maps-master >/dev/null 2>&1 && rm -rf autoexec_server.cfg >/dev/null 2>&1\"",
 		"SkipOnFailure": false,
 		"OneShot": true
+	},
+	{
+		"UpdateStageName": "Get serverconfig.cfg File",
+		"UpdateSourcePlatform": "Linux",
+		"UpdateSource": "FetchURL",
+		"UpdateSourceData": "https://raw.githubusercontent.com/RudeCube/CustomAMPTemplates/refs/heads/main/serverconfig.cfg",
+		"UpdateSourceArgs": "serverconfig.cfg",
+		"UpdateSourceTarget": "{{$FullBaseDir}}",
+		"OverwriteExistingFiles": true,
+		"SkipOnFailure": false,
+		"OneShot": false
 	}
 ]
