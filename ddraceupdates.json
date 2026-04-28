@@ -22,17 +22,6 @@
 		"OneShot": false
 	},
 	{
-		"UpdateStageName": "Get masters.cfg File",
-		"UpdateSourcePlatform": "Linux",
-		"UpdateSource": "FetchURL",
-		"UpdateSourceData": "https://raw.githubusercontent.com/RudeCube/CustomAMPTemplates/refs/heads/main/masters.cfg",
-		"UpdateSourceArgs": "masters.cfg",
-		"UpdateSourceTarget": "{{$FullBaseDir}}",
-		"OverwriteExistingFiles": true,
-		"SkipOnFailure": false,
-		"OneShot": false
-	},
-	{
 		"UpdateStageName": "Get Maps",
 		"UpdateSourcePlatform": "Linux",
 		"UpdateSource": "FetchURL",
